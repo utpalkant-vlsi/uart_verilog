@@ -1,21 +1,22 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
+Company: National Institute of Technology, Patna.
+// Engineer: Utpal Kant
 // 
-// Create Date: 05.04.2026 11:27:43
-// Design Name: 
+// Create Date: 01.01.2026 14:49:10
+// Design Name: uart
 // Module Name: uart_top
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
+// Project Name: uart_Design
+// Target Devices: Basys3 FPGA
+// Tool Versions:Vivado 2024.2 
+// Description: Top-level wrapper module that instantiates and interconnects the baud rate generator,
+//               the UART transmitter (sender), and the UART receiver into a unified system interface.
+// Dependencies: uart.v
 // 
 // Revision:
 // Revision 0.01 - File Created
 // Additional Comments:
+// 
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
