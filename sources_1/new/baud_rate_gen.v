@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: National Institue of Technology, Patna.
+// Company: National Institute of Technology, Patna.
 // Engineer: Utpal Kant
 // 
 // Create Date: 01.01.2026 14:49:10
