@@ -1,17 +1,20 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
+//////////////////////////////////////////////////////////////////////////////////
+// Company: National Institue of Technology, Patna.
+// Engineer: Utpal Kant
 // 
-// Create Date: 05.04.2026 11:36:21
-// Design Name: 
+// Create Date: 01.01.2026 14:49:10
+// Design Name: uart
 // Module Name: uart_tb
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
+// Project Name: uart_Design
+// Target Devices: Basys3 FPGA
+// Tool Versions:Vivado 2024.2 
+// Description: Testbench to verify the functionality of the UART 
+//              Controller design. It generates the clock, reset signals,
+//              and drives stimulus to simulate parallel data transmission and serial reception,
+//               ensuring correct baud rate timing and data integrity.
+// Dependencies: uart.v
 // 
 // Revision:
 // Revision 0.01 - File Created
