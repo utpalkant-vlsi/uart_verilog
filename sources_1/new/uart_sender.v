@@ -1,17 +1,16 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
+Company: National Institute of Technology, Patna.
+// Engineer: Utpal Kant
 // 
-// Create Date: 04.04.2026 20:29:28
-// Design Name: 
+// Create Date: 01.01.2026 14:49:10
+// Design Name: uart
 // Module Name: uart_sender
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
+// Project Name: uart_Design
+// Target Devices: Basys3 FPGA
+// Tool Versions:Vivado 2024.2 
+// Description: Accepts parallel data inputs, wraps them with a start bit and a stop bit,
+//              and shifts the complete data frame out serially over the TX line at a rate synchronized by the transmitter clock enable tick.
+// Dependencies: uart.v
 // 
 // Revision:
 // Revision 0.01 - File Created
