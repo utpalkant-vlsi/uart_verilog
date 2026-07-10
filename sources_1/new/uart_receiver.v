@@ -1,75 +1,21 @@
-module uart_tb;
-reg clk,rst;
-reg[7:0] data_in;
-reg wr_enb;
-wire rdy;
-reg rdy_clr;
-wire[7:0]dout;
-wire busy;
-uart_top ut(rst,data_in,wr_enb,clk,rdy_clr,rdy,busy,data_out);
-
-initial begin
-{clk,rst,data_in,rdy_clr}=0;
-end
-always #5 clk = ~clk;
-
-task send_byte(input[7:0]din);
-begin 
-@(negedge clk);
-data_in = din;
-wr_enb = 1'b1;
-
-@(negedge clk)
-wr_enb = 0;
-end
-endtask
-
-task clear_ready;
-begin
-@(negedge clk)
-rdy_clr = 1'b1;
-@(negedge clk)
-rdy_clr = 1'b0;
-end
-endtask
-
-initial begin
-@(negedge clk)
-rst = 1'b1;
-@(negedge clk)
-rst = 1'b0;
-send_byte (8'h41);
-wait (!busy);
-wait(rdy);
-$display(" received data is %h",dout);
-clear_ready;
-#1001;
-send_byte (8'h55);
-wait(!busy);
-wait(rdy);
-$display(" received data is %h",dout);
-clear_ready;
-end
-endmodule
-
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
+// Company: National Institute of Technology, Patna.
+// Engineer: Utpal Kant
 // 
-// Create Date: 04.04.2026 20:53:13
-// Design Name: 
+// Create Date: 01.01.2026 14:49:10
+// Design Name: uart
 // Module Name: uart_receiver
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
+// Project Name: uart_Design
+// Target Devices: Basys3 FPGA
+// Tool Versions:Vivado 2024.2 
+// Description: Samples incoming asynchronous serial data from the RX line.
+//              It detects the start bit, samples consecutive data bits based on the receiver clock enable tick,
+//              verifies the stop bit, and outputs the reconstructed parallel byte along with a data-ready flag..
+// Dependencies: uart.v
 // 
 // Revision:
 // Revision 0.01 - File Created
 // Additional Comments:
-// 
 //////////////////////////////////////////////////////////////////////////////////
 
 
