@@ -1,17 +1,18 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
+// Company: National Institue of Technology, Patna.
+// Engineer: Utpal Kant
 // 
-// Create Date: 04.04.2026 20:20:10
-// Design Name: 
+// Create Date: 01.01.2026 14:49:10
+// Design Name: uart
 // Module Name: baud_rate_gen
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
+// Project Name: uart_Design
+// Target Devices: Basys3 FPGA
+// Tool Versions:Vivado 2024.2 
+// Description: Generates the precise clock enable ticks required for the transmitter (tx_enb) 
+//              and receiver (rx_enb). It divides down the main system clock to establish accurate
+//              synchronization for asynchronous serial communication based on the target baud rate.
+// Dependencies: uart.v
 // 
 // Revision:
 // Revision 0.01 - File Created
